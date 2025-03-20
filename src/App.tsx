@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const [inputText, setInputText] = useState<string>('');
-  const [fontFamily, setFontFamily] = useState<string>('Noto Serif TC, serif');
+  const [fontFamily, setFontFamily] = useState<string>('Noto Sans TC, sans-serif');
   const [fontSize, setFontSize] = useState<number>(100);
 
   // 處理觸摸事件，防止需要雙擊
@@ -16,11 +16,8 @@ function App() {
 
   // 定義字體選項
   const fontOptions = [
-    { value: 'Noto Serif TC, serif', label: '明體 (思源宋體)' },
     { value: 'Noto Sans TC, sans-serif', label: '黑體 (思源黑體)' },
-    { value: 'ZCOOL XiaoWei, serif', label: '仿宋體' },
-    { value: 'Ma Shan Zheng, cursive', label: '草書體' },
-    { value: 'ZCOOL QingKe HuangYou, cursive', label: '藝術體' },
+    { value: 'Noto Serif TC, serif', label: '明體 (思源宋體)' },
   ];
 
   return (
@@ -65,7 +62,7 @@ function App() {
       </div>
       
       <div 
-        className="rounded-lg min-h-[300px] flex items-center justify-center bg-white transition-all"
+        className="rounded-lg font-medium min-h-[300px] flex items-center justify-center bg-white transition-all"
         style={{ fontFamily, fontSize: `${fontSize}px` }}
       >
         {inputText || '在上方輸入文字以預覽效果'}
