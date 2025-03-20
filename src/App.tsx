@@ -1,12 +1,27 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+  // 從 localStorage 讀取初始值，如果沒有則使用預設值
   const [inputText, setInputText] = useState<string>('');
-  const [fontFamily, setFontFamily] = useState<string>('Noto Sans TC, sans-serif');
-  const [fontSize, setFontSize] = useState<number>(100);
+  const [fontFamily, setFontFamily] = useState<string>(() => {
+    return localStorage.getItem('fontFamily') || 'Noto Sans TC, sans-serif';
+  });
+  const [fontSize, setFontSize] = useState<number>(() => {
+    const savedSize = localStorage.getItem('fontSize');
+    return savedSize ? parseInt(savedSize) : 100;
+  });
+
+  // 當字型或大小改變時，保存到 localStorage
+  useEffect(() => {
+    localStorage.setItem('fontFamily', fontFamily);
+  }, [fontFamily]);
+
+  useEffect(() => {
+    localStorage.setItem('fontSize', fontSize.toString());
+  }, [fontSize]);
 
   // 處理觸摸事件，防止需要雙擊
   const handleTouchStart = (e: React.TouchEvent) => {
