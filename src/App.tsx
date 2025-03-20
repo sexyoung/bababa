@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [inputText, setInputText] = useState<string>('');
   const [fontFamily, setFontFamily] = useState<string>('Noto Serif TC, serif');
-  const [fontSize, setFontSize] = useState<number>(60);
+  const [fontSize, setFontSize] = useState<number>(100);
 
   // 處理觸摸事件，防止需要雙擊
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -54,7 +54,7 @@ function App() {
           <input 
             type="range" 
             min="60" 
-            max="200" 
+            max="280" 
             value={fontSize}
             onChange={(e) => setFontSize(parseInt(e.target.value))}
             onTouchStart={handleTouchStart}
