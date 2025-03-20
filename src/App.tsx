@@ -32,10 +32,10 @@ function App() {
         />
       </div>
 
-      <div className="flex items-center space-x-6 mb-4 bg-gray-50 p-4 rounded-lg">
+      <div className="flex items-center space-x-6 mb-4 p-4 rounded-lg border border-gray-300">
         <div className="flex items-center">
           <select 
-            className="p-3 rounded-md border border-gray-300 bg-white shadow-sm cursor-pointer hover:border-blue-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+            className="p-3 rounded-md border border-gray-300 shadow-sm cursor-pointer hover:border-blue-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
             value={fontFamily}
             onChange={(e) => setFontFamily(e.target.value)}
           >
@@ -62,7 +62,7 @@ function App() {
       </div>
       
       <div 
-        className="rounded-lg font-medium min-h-[300px] flex items-center justify-center bg-white transition-all"
+        className="rounded-lg font-medium min-h-[300px] flex items-center justify-center transition-all"
         style={{ fontFamily, fontSize: `${fontSize}px` }}
       >
         {inputText || '在上方輸入文字以預覽效果'}
