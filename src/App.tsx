@@ -18,6 +18,7 @@ function App() {
   const fontOptions = [
     { value: 'Noto Sans TC, sans-serif', label: '黑體 (思源黑體)' },
     { value: 'Noto Serif TC, serif', label: '明體 (思源宋體)' },
+    { value: 'DotGothic16, sans-serif', label: '位元體' },
   ];
 
   return (
