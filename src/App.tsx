@@ -66,7 +66,7 @@ function App() {
           className="rounded-lg font-medium min-h-[300px] flex items-center justify-center transition-all"
           style={{ fontFamily, fontSize: `${fontSize}px` }}
         >
-          {inputText || '在上方輸入文字以預覽效果'}
+          {inputText || '在上方輸入字來預覽'}
         </div>
       </div>
 
